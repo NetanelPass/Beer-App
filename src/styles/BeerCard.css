@@ -1,0 +1,99 @@
+.beer-card {
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow */
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  margin: 1rem; /* External margin */
+  padding: 1rem; /* Internal padding */
+  /* transition: transform 0.2s, box-shadow 0.2s; Animation for scale and shadow */
+  width: 180px; /* Fixed width */
+  height: 500px; /* Fixed height */
+  display: flex; /* Flex display */
+  flex-direction: column; /* Column direction */
+  justify-content: space-between; /* Even spacing between items */
+}
+
+.beer-card:hover {
+  transform: scale(1.03); /* Slight scaling on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.beer-image {
+  width: 100%; /* Full width image */
+  height: auto; /* Automatic height */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.beer-name {
+  font-size: 1.4rem; /* Larger text size */
+  margin: 0.5rem 0; /* Vertical margin */
+  color: #2c3e50; /* Darker text color */
+  flex-grow: 1; /* Allow text to fill available space */
+}
+
+.rating-button,
+.details-button {
+  align-self: flex-start; /* Align buttons to the start */
+}
+
+.rating-container {
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: space-between; /* Even spacing between elements */
+  margin-top: 0.5rem; /* Smaller top margin */
+}
+
+.rating-label {
+  font-weight: bold; /* Bold text */
+  margin-right: 0.5rem; /* Right margin */
+}
+
+.rating-select {
+  margin-left: 0.5rem; /* Left margin */
+  padding: 0.3rem; /* Internal padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.rating-display {
+  margin-top: 0.5rem; /* Top margin */
+  font-size: 1rem; /* Text size */
+  color: #555; /* Darker text color */
+}
+
+.favorite-icon {
+  margin-left: 0.5rem; /* Margin between beer name and icon */
+  color: #e74c3c; /* Dark red color for icon */
+  font-size: 1.2rem; /* Icon size */
+}
+
+.rating-button {
+  background-color: #8bc34a; /* Medium green background */
+  color: #ffffff; /* White text color */
+  border: none; /* No border */
+  padding: 10px 15px; /* Internal padding */
+  text-align: center; /* Center text */
+  display: inline-block; /* Block display */
+  margin: 4px 2px; /* External margin */
+  cursor: pointer; /* Pointer cursor */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.rating-button:hover {
+  background-color: #7cb342; /* Darker background on hover */
+}
+
+.details-button {
+  margin-top: 10px; /* Margin between this button and others */
+  background-color: #ffd54f; /* Medium yellow background */
+  color: #333; /* Dark text color */
+  border: none; /* No border */
+  padding: 8px 12px; /* Padding */
+  cursor: pointer; /* Pointer cursor */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.details-button:hover {
+  background-color: #ffca28; /* Background color on hover */
+}
