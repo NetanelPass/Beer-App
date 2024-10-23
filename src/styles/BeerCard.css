@@ -1,7 +1,7 @@
 .beer-card {
   border: 1px solid #ddd; /* Light gray border */
   border-radius: 8px; /* Rounded corners */
-  overflow: hidden; /* Hide overflow */
+  overflow: visible;; /* Hide overflow */
   background-color: #ffffff; /* White background */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
   margin: 1rem; /* External margin */
@@ -54,6 +54,7 @@
   padding: 0.3rem; /* Internal padding */
   border: 1px solid #ccc; /* Gray border */
   border-radius: 4px; /* Rounded corners */
+  width: 40px;
 }
 
 .rating-display {

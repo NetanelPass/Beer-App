@@ -100,7 +100,7 @@ const BeerCard: React.FC<BeerProps> = ({
             <option value="5">5</option>
           </select>
         )}
-        {userRating !== null && (
+        {userRating !== null && !isRatingVisible &&(
           <p className="rating-display">Your rating is: {userRating}</p>
         )}
       </div>

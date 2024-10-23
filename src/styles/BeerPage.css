@@ -71,6 +71,11 @@ button:hover {
   margin: 20px 0;
 }
 
+.pagination button:disabled {
+  background-color: #ccc; /* Gray background for disabled button */
+  cursor: not-allowed; /* Not-allowed cursor */
+}
+
 .pagination button {
   margin: 0 5px;
 }

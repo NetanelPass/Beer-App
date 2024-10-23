@@ -26,19 +26,6 @@ const BeerPage: React.FC<BeerPageProps> = ({ isFavoritesPage }) => {
 
   const [currentPage, setCurrentPage] = useState(0);
 
-  useEffect(() => {
-    const relevantBeers = isFavoritesPage
-      ? beers.filter((beer) => favorites.includes(beer.id))
-      : beers;
-
-    const filteredIds = relevantBeers
-      .filter((beer) => filterBeers(beer))
-      .map((beer) => beer.id);
-
-    dispatch(setFilteredBeers(filteredIds));
-    setCurrentPage(0);
-  }, [foodPair, beers, dispatch, ratingFilter, favorites, isFavoritesPage]);
-
   const filterBeers = (beer: Beer) => {
     // Split the foodPair input by commas and trim whitespace from each item
     const foodPairsInput = foodPair
@@ -59,6 +46,30 @@ const BeerPage: React.FC<BeerPageProps> = ({ isFavoritesPage }) => {
 
     return matchesFoodPair && matchesRating;
   };
+
+  function updateFilteredBeers() {
+    const relevantBeers = isFavoritesPage
+      ? beers.filter((beer) => favorites.includes(beer.id))
+      : beers;
+
+    const filteredIds = relevantBeers
+      .filter((beer) => filterBeers(beer))
+      .map((beer) => beer.id);
+
+    dispatch(setFilteredBeers(filteredIds));
+  }
+
+  useEffect(() => {
+    updateFilteredBeers();
+    setCurrentPage(0);
+  }, [foodPair, beers, dispatch, ratingFilter, isFavoritesPage]);
+
+  useEffect(() => {
+    if (isFavoritesPage) {
+      updateFilteredBeers();
+      setCurrentPage(0);
+    }
+  }, [favorites]);
 
   // Pagination logic
   const startIndex = currentPage * ITEMS_PER_PAGE;
