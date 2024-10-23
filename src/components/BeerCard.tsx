@@ -45,6 +45,7 @@ const BeerCard: React.FC<BeerProps> = ({
   return (
     <div className="beer-card">
       <img
+        className="beer-image"
         src={beer.imageUrl}
         alt={beer.name}
         onError={(e) => {

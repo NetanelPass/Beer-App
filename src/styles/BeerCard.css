@@ -8,7 +8,7 @@
   padding: 1rem; /* Internal padding */
   /* transition: transform 0.2s, box-shadow 0.2s; Animation for scale and shadow */
   width: 180px; /* Fixed width */
-  height: 500px; /* Fixed height */
+  height: auto; /* Fixed height */
   display: flex; /* Flex display */
   flex-direction: column; /* Column direction */
   justify-content: space-between; /* Even spacing between items */
@@ -20,9 +20,11 @@
 }
 
 .beer-image {
-  width: 100%; /* Full width image */
-  height: auto; /* Automatic height */
-  border-radius: 8px; /* Rounded corners */
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: none; 
 }
 
 .beer-name {

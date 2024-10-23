@@ -112,7 +112,7 @@ const BeerPage: React.FC<BeerPageProps> = ({ isFavoritesPage }) => {
   }
   return (
     <div>
-      <h1>{isFavoritesPage ? "Favorite Beers" : "Browse Beers"}</h1>
+      <h2>{isFavoritesPage ? "Favorite Beers" : "Browse Beers"}</h2>
       {isFavoritesPage && (
         <button
           className="remove-all-button"

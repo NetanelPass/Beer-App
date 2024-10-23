@@ -7,11 +7,6 @@ body {
   justify-content: flex-start;
 }
 
-h1 {
-  font-size: 2em; /* Large font size */
-  margin-bottom: 20px; /* Margin below the title */
-  color: #333; /* Dark gray text color */
-}
 
 button {
   padding: 10px 20px; /* Padding inside buttons */
