@@ -31,7 +31,7 @@ button {
 }
 
 button:hover {
-  background-color: #ff6347; /* צבע כהה יותר בהקשה */
+  background-color: #ff6347; 
 }
 
 .filter-container {
